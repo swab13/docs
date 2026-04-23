@@ -11,7 +11,7 @@ parent: Microsoft 365
 
 Often we need to perform searches over many mailboxes to find just those few which match certain criteria.
 
-One that I recently had was to find users which have a forward on their mailbox (set on the mailbox attribute) in Office 365.
+One that I recently had was to find users which have a forward on their mailbox (set on the mailbox attribute) in Microsoft 365.
 
 One option I had was I could run:
 
@@ -31,6 +31,7 @@ In the above example, the get-mailbox -resultsize unlimited retrieves that data
 
 # We can speed this up!
 
+
 The where executes locally, so we really want this to be executed on the remote server, decreasing the amount of data transferred back to your PowerShell session.  So how do we do that?  We can filter the results of the get-mailbox command using the -filter parameter and the command will only return what matches the filter and it performs it all on the remote server.
 
 So we could change this example
@@ -47,11 +48,12 @@ get-mailbox -resultsize unlimited -filter "ForwardingSmtpAddress -like '*'"
 
 # Prove it..
 
+
 Unfortunately due to way these commands work, we can't use -resultsize parameter to prove that these commands are faster. If we did use the -resultssize parameter e.g. -resultsize 100, the first example the command would only search the first 100 mailboxes while the updated version above would search mailboxes and return only first 100 forward results.
 
 So in order to show the results, I'll run this on a tenancy which contains over 300,000 mailboxes.  The original PowerShell command took over **2.5 hours** while the new command took just over **10 minutes**.
 
 As you can see, the larger the number of mailboxes being searched the more benefit using ```-filter``` will give you.
 
-If you have a small amount of users in your tenancy, then you probably won't see very much difference in using the -filter parameter, however if you're company expands or your scripts are used on larger Office 365 tenancies, using -filter may help your scripts get quicker results.
+If you have a small amount of users in your tenancy, then you probably won't see very much difference in using the ```-filter``` parameter, however if you're company expands or your scripts are used on larger Office 365 tenancies, using -filter may help your scripts get quicker results.
 
