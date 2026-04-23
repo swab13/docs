@@ -56,3 +56,6 @@ nav_enabled: true
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase
 
+nav_external_links_new_tab: true
+
+
