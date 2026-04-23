@@ -7,3 +7,5 @@ url: https://swab13.github.io
 
 # For copy button on code
 enable_copy_code_button: true
+back_to_top: true
+back_to_top_text: "Back to top"
