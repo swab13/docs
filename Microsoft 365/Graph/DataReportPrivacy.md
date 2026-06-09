@@ -1,6 +1,6 @@
 ---
 title: Switching Microsoft 365 Report Data Privacy On and Off
-parent: Microsoft 365
+parent: Graph
 ---
 
 # Switching Microsoft 365 Report Data Privacy On and Off
