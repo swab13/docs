@@ -1,6 +1,6 @@
 ---
 title: Quickly retrieving data from Exchange Online mailboxes
-parent: Microsoft 365
+parent: Exchange Online
 ---
 
 # Quickly retrieving data from Exchange Online mailboxes
