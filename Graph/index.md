@@ -1,7 +1,6 @@
 ---
 title: Graph
-parent: Microsoft 365
-nav_order: 5
+nav_order: 3
 ---
 
 # Graph
