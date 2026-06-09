@@ -1,6 +1,6 @@
 ---
 title: Entra Connect Filtering
-parent: Microsoft 365
+parent: Entra
 ---
 
 # Entra Connect Filtering
