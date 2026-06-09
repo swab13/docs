@@ -32,8 +32,9 @@ Enable the report privacy setting
 ```
 function Enable-ReportPrivacy {
   $Uri = "https://graph.microsoft.com/V1.0/admin/reportSettings"
-  $Settings = @{}
-  $Settings.Add("displayConcealedNames","true")
+  $Body = @{}
+  $Body.Add("displayConcealedNames","true")
+  Invoke-MgGraphRequest -Uri $Uri -Method Patch -Body $Body
 }
 ```
 
@@ -42,7 +43,8 @@ Disable the report privacy setting
 ```
 function Disable-ReportPrivacy {
   $Uri = "https://graph.microsoft.com/V1.0/admin/reportSettings"
-  $Settings = @{}
-  $Settings.Add("displayConcealedNames","false")
+  $Body = @{}
+  $Body.Add("displayConcealedNames","false")
+  Invoke-MgGraphRequest -Uri $Uri -Method Patch -Body $Body
 }
 ```
